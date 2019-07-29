@@ -32,6 +32,7 @@ public:
         for(int m = 0; m < this->keys_.size(); ++m){
             if(this->keys_[m].front() == key){
                 num_el = this->keys_[m].size()-1;
+                break;
             }
         }
         return num_el;
@@ -46,6 +47,7 @@ public:
             if(this->keys_[m].front() == key){
                 ptr = this->keys_[m].data();
                 ++ptr;
+                break;
             }
         }
         return ptr;
@@ -58,6 +60,7 @@ public:
             if(this->keys_[m].front() == key){
                 this->keys_[m].push_back(value);
                 ++i;
+                break;
             }
         }
         if(i == 0){
